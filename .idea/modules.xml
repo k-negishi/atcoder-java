@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ABC045/ABC045.iml" filepath="$PROJECT_DIR$/ABC045/ABC045.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ABC057/ABC057.iml" filepath="$PROJECT_DIR$/ABC057/ABC057.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ABC100/ABC100.iml" filepath="$PROJECT_DIR$/ABC100/ABC100.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ABC115/ABC115.iml" filepath="$PROJECT_DIR$/ABC115/ABC115.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ABC120/ABC120.iml" filepath="$PROJECT_DIR$/ABC120/ABC120.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ABC131/ABC131.iml" filepath="$PROJECT_DIR$/ABC131/ABC131.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ABC138/ABC138.iml" filepath="$PROJECT_DIR$/ABC138/ABC138.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ABC139/ABC139.iml" filepath="$PROJECT_DIR$/ABC139/ABC139.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ABC140/ABC140.iml" filepath="$PROJECT_DIR$/ABC140/ABC140.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ABC142/ABC142.iml" filepath="$PROJECT_DIR$/ABC142/ABC142.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ABC143/ABC143.iml" filepath="$PROJECT_DIR$/ABC143/ABC143.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ABC144/ABC144.iml" filepath="$PROJECT_DIR$/ABC144/ABC144.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ABC156/ABC156.iml" filepath="$PROJECT_DIR$/ABC156/ABC156.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ABC157/ABC157.iml" filepath="$PROJECT_DIR$/ABC157/ABC157.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ABC158/ABC158.iml" filepath="$PROJECT_DIR$/ABC158/ABC158.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Atcoder.iml" filepath="$PROJECT_DIR$/Atcoder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZZZ_TestSpace/ZZZ_TestSpace.iml" filepath="$PROJECT_DIR$/ZZZ_TestSpace/ZZZ_TestSpace.iml" />
+    </modules>
+  </component>
+</project>
