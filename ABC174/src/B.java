@@ -1,37 +1,62 @@
 import java.util.*;
 
-public class ${NAME} {
+public class B {
     final static int MOD = 1000000007;
-    
+
     public static void main(String[] args) {
         MyScanner sc = new MyScanner();
-        
-        
+        int n = sc.nextInt();
+        int d = sc.nextInt();
+        int[] x = new int[n];
+        int[] y = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            x[i] = sc.nextInt();
+            y[i] = sc.nextInt();
+        }
+
+        int count = 0;
+
+        for (int i = 0; i < n; i++) {
+            double distance = Math.sqrt(
+                    Math.pow(
+                            x[i], 2)
+                    + Math.pow(
+                            y[i], 2)
+            );
+
+            if (distance <= d) {
+                count++;
+            }
+        }
+
+        System.out.println(count);
+
     }
-    
+
     static class MyScanner {
         static Scanner sc = new Scanner(System.in);
-        
+
         String next() {
             return sc.next();
         }
-        
+
         String nextLine() {
             return sc.nextLine();
         }
-        
+
         int nextInt() {
             return Integer.parseInt(sc.next());
         }
-        
+
         double nextDouble() {
             return Double.parseDouble(next());
         }
-        
+
         long nextLong() {
             return Long.parseLong(next());
         }
-        
+
         int[] nextIntArray(int n) {
             int[] array = new int[n];
             for (int i = 0; i < n; i++) {
@@ -39,7 +64,7 @@ public class ${NAME} {
             }
             return array;
         }
-        
+
         double[] nextDoubleArray(int n) {
             double[] array = new double[n];
             for (int i = 0; i < n; i++) {
@@ -47,7 +72,7 @@ public class ${NAME} {
             }
             return array;
         }
-        
+
         long[] nextLongArray(int n) {
             long[] array = new long[n];
             for (int i = 0; i < n; i++) {
@@ -55,7 +80,7 @@ public class ${NAME} {
             }
             return array;
         }
-        
+
         String[] nextLineArray(int n) {
             String[] array = new String[n];
             for (int i = 0; i < n; i++) {
@@ -63,7 +88,7 @@ public class ${NAME} {
             }
             return array;
         }
-        
+
         int[][] nextIntMatrix(int n, int m) {
             int[][] matrix = new int[n][m];
             for (int i = 0; i < n; i++) {
@@ -73,7 +98,7 @@ public class ${NAME} {
             }
             return matrix;
         }
-        
+
         double[][] nextDoubleMatrix(int n, int m) {
             double[][] matrix = new double[n][m];
             for (int i = 0; i < n; i++) {
@@ -83,7 +108,7 @@ public class ${NAME} {
             }
             return matrix;
         }
-        
+
         long[][] nextLongMatrix(int n, int m) {
             long[][] matrix = new long[n][m];
             for (int i = 0; i < n; i++) {

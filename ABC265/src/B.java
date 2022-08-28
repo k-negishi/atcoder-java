@@ -1,37 +1,59 @@
 import java.util.*;
 
-public class ${NAME} {
+public class B {
     final static int MOD = 1000000007;
-    
+
     public static void main(String[] args) {
         MyScanner sc = new MyScanner();
-        
-        
+        int N = sc.nextInt();
+        int M = sc.nextInt();
+        long T = sc.nextLong();
+
+        long[] A = sc.nextLongArray(N - 1);
+        long[] B = new long[N];
+
+        for (int i = 0; i < M; i++) {
+            int x = sc.nextInt() - 1;
+            long y = sc.nextLong();
+            B[x] = y;
+        }
+
+        for (int i = 1; i < N; i++) {
+            T -= A[i-1];
+            if (T <= 0) {
+                System.out.println("No");
+                return;
+            }
+            T += B[i];
+        }
+
+        System.out.println("Yes");
+
     }
-    
+
     static class MyScanner {
         static Scanner sc = new Scanner(System.in);
-        
+
         String next() {
             return sc.next();
         }
-        
+
         String nextLine() {
             return sc.nextLine();
         }
-        
+
         int nextInt() {
             return Integer.parseInt(sc.next());
         }
-        
+
         double nextDouble() {
             return Double.parseDouble(next());
         }
-        
+
         long nextLong() {
             return Long.parseLong(next());
         }
-        
+
         int[] nextIntArray(int n) {
             int[] array = new int[n];
             for (int i = 0; i < n; i++) {
@@ -39,7 +61,7 @@ public class ${NAME} {
             }
             return array;
         }
-        
+
         double[] nextDoubleArray(int n) {
             double[] array = new double[n];
             for (int i = 0; i < n; i++) {
@@ -47,7 +69,7 @@ public class ${NAME} {
             }
             return array;
         }
-        
+
         long[] nextLongArray(int n) {
             long[] array = new long[n];
             for (int i = 0; i < n; i++) {
@@ -55,7 +77,7 @@ public class ${NAME} {
             }
             return array;
         }
-        
+
         String[] nextLineArray(int n) {
             String[] array = new String[n];
             for (int i = 0; i < n; i++) {
@@ -63,7 +85,7 @@ public class ${NAME} {
             }
             return array;
         }
-        
+
         int[][] nextIntMatrix(int n, int m) {
             int[][] matrix = new int[n][m];
             for (int i = 0; i < n; i++) {
@@ -73,7 +95,7 @@ public class ${NAME} {
             }
             return matrix;
         }
-        
+
         double[][] nextDoubleMatrix(int n, int m) {
             double[][] matrix = new double[n][m];
             for (int i = 0; i < n; i++) {
@@ -83,7 +105,7 @@ public class ${NAME} {
             }
             return matrix;
         }
-        
+
         long[][] nextLongMatrix(int n, int m) {
             long[][] matrix = new long[n][m];
             for (int i = 0; i < n; i++) {
