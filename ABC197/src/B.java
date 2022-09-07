@@ -1,47 +1,68 @@
 import java.util.*;
 
-public class C {
+public class B {
     final static int MOD = 1000000007;
-    
+
     public static void main(String[] args) {
         MyScanner sc = new MyScanner();
-        int n = sc.nextInt();
-        Map<Integer, Integer> studentMap = new TreeMap<>();
+        int h = sc.nextInt();
+        int w = sc.nextInt();
+        int x = sc.nextInt();
+        int y = sc.nextInt();
 
-
-        for (int i = 1; i <= n; i++) {
-            int a = sc.nextInt();
-            studentMap.put(a, i);
+        int count = 0;
+        char[][] s = new char[h][w];
+        for (int i = 0; i < h; i++) {
+            String moji = sc.next();
+            s[i] = moji.toCharArray();
         }
 
-        studentMap.forEach((k, v) -> {
-            System.out.println(v);
-        });
+        int i1 = Math.max(x - 2, 0);
+
+        for (int i = i1; i < Math.min(w, x+1) ; i++) {
+            if (s[y-1][i] == '.')  {
+                count++;
+            }
+        }
+
+        int j1 = Math.max(y - 2, 0);
+        for (int j = j1; j < Math.min(h, y+1) ; j++) {
+            if (s[j][x-1] == '.')  {
+                count++;
+            }
+        }
+
+        if (s[x-1][y-1] == '.') {
+            count--;
+        }
+
+        System.out.println(count);
+
     }
-    
+
     static class MyScanner {
         static Scanner sc = new Scanner(System.in);
-        
+
         String next() {
             return sc.next();
         }
-        
+
         String nextLine() {
             return sc.nextLine();
         }
-        
+
         int nextInt() {
             return Integer.parseInt(sc.next());
         }
-        
+
         double nextDouble() {
             return Double.parseDouble(next());
         }
-        
+
         long nextLong() {
             return Long.parseLong(next());
         }
-        
+
         int[] nextIntArray(int n) {
             int[] array = new int[n];
             for (int i = 0; i < n; i++) {
@@ -49,7 +70,7 @@ public class C {
             }
             return array;
         }
-        
+
         double[] nextDoubleArray(int n) {
             double[] array = new double[n];
             for (int i = 0; i < n; i++) {
@@ -57,7 +78,7 @@ public class C {
             }
             return array;
         }
-        
+
         long[] nextLongArray(int n) {
             long[] array = new long[n];
             for (int i = 0; i < n; i++) {
@@ -65,7 +86,7 @@ public class C {
             }
             return array;
         }
-        
+
         String[] nextLineArray(int n) {
             String[] array = new String[n];
             for (int i = 0; i < n; i++) {
@@ -73,7 +94,7 @@ public class C {
             }
             return array;
         }
-        
+
         int[][] nextIntMatrix(int n, int m) {
             int[][] matrix = new int[n][m];
             for (int i = 0; i < n; i++) {
@@ -83,7 +104,7 @@ public class C {
             }
             return matrix;
         }
-        
+
         double[][] nextDoubleMatrix(int n, int m) {
             double[][] matrix = new double[n][m];
             for (int i = 0; i < n; i++) {
@@ -93,7 +114,7 @@ public class C {
             }
             return matrix;
         }
-        
+
         long[][] nextLongMatrix(int n, int m) {
             long[][] matrix = new long[n][m];
             for (int i = 0; i < n; i++) {
