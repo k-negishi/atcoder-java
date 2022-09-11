@@ -1,17 +1,29 @@
 import java.util.*;
 
-public class A {
+public class B {
     final static int MOD = 1000000007;
 
     public static void main(String[] args) {
         MyScanner sc = new MyScanner();
 
-        int a = sc.nextInt();
-        int b = sc.nextInt();
+        int n = sc.nextInt();
+        int[] a = sc.nextIntArray(n);
+        int[] b = sc.nextIntArray(n);
+        Set<Integer> ansSet = new HashSet<>();
+        for (int i = 1; i <= 1000; i++) {
+            ansSet.add(i);
+        }
 
-        double ans =  (1.0 - ((double)b / a)) * 100;
-        System.out.println(ans);
+        int count = 0;
 
+        for (int i = 0; i < n; i++) {
+            Set<Integer> tempSet = new HashSet<>();
+            for (int x = a[i]; x <= b[i] ; x++) {
+                tempSet.add(x);
+            }
+            ansSet.retainAll(tempSet);
+        }
+        System.out.println(ansSet.size());
 
     }
 

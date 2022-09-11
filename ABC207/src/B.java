@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class A {
+public class B {
     final static int MOD = 1000000007;
 
     public static void main(String[] args) {
@@ -8,11 +8,29 @@ public class A {
 
         int a = sc.nextInt();
         int b = sc.nextInt();
+        int c = sc.nextInt();
+        int d = sc.nextInt();
 
-        double ans =  (1.0 - ((double)b / a)) * 100;
-        System.out.println(ans);
+        long blueCount = a;
+        long redCount = 0;
+        int ans = -1;
 
+        int index = 0;
 
+        if (b >= c * d) {
+            System.out.println(-1);
+            return;
+        }
+
+        while (true) {
+            if (blueCount <= redCount * d) {
+                System.out.println(index);
+                return;
+            }
+            blueCount += b;
+            redCount += c;
+            index++;
+        }
     }
 
     static class MyScanner {

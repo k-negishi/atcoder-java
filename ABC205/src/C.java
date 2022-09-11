@@ -1,18 +1,43 @@
+import java.math.BigInteger;
 import java.util.*;
 
-public class A {
+public class C {
     final static int MOD = 1000000007;
 
     public static void main(String[] args) {
         MyScanner sc = new MyScanner();
 
-        int a = sc.nextInt();
-        int b = sc.nextInt();
+        long a = sc.nextLong();
+        long b = sc.nextLong();
+        long c = sc.nextLong();
 
-        double ans =  (1.0 - ((double)b / a)) * 100;
-        System.out.println(ans);
+        if (c % 2 == 0) {
+            a *= a;
+            b *= b;
+        }
 
+        if (a < b) {
+            System.out.println("<");
+        } else if(a == b) {
+            System.out.println("=");
+        } else {
+            System.out.println(">");
+        }
 
+//        int a = sc.nextInt();
+//        int b = sc.nextInt();
+//        int c = sc.nextInt();
+//
+//        BigInteger powAC = BigInteger.valueOf(a).pow(c);
+//        BigInteger powBC = BigInteger.valueOf(b).pow(c);
+//
+//        if (powAC.compareTo(powBC) < 0) {
+//            System.out.println("<");
+//        } else if (powAC.compareTo(powBC) == 0) {
+//            System.out.println("=");
+//        } else {
+//            System.out.println(">");
+//        }
     }
 
     static class MyScanner {

@@ -1,16 +1,23 @@
 import java.util.*;
 
-public class A {
+public class B {
     final static int MOD = 1000000007;
 
     public static void main(String[] args) {
         MyScanner sc = new MyScanner();
 
-        int a = sc.nextInt();
-        int b = sc.nextInt();
+        long n = sc.nextLong();
+        int k = sc.nextInt();
 
-        double ans =  (1.0 - ((double)b / a)) * 100;
-        System.out.println(ans);
+        for (int i = 0; i < k; i++) {
+            if (n % 200 == 0) {
+                n /= 200;
+            } else {
+                n = (n * 1000) + 200;
+            }
+        }
+
+        System.out.println(n);
 
 
     }

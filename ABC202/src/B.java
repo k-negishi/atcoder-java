@@ -1,16 +1,28 @@
 import java.util.*;
 
-public class A {
+public class B {
     final static int MOD = 1000000007;
 
     public static void main(String[] args) {
         MyScanner sc = new MyScanner();
 
-        int a = sc.nextInt();
-        int b = sc.nextInt();
+        String s = sc.nextLine();
+        StringBuilder sb = new StringBuilder(s).reverse();
+        String answerString = sb.toString();
+        char[] charAry = answerString.toCharArray();
 
-        double ans =  (1.0 - ((double)b / a)) * 100;
-        System.out.println(ans);
+        for (int i = 0; i < charAry.length; i++) {
+            if (charAry[i] == '6') {
+                charAry[i] = '9';
+            } else if (charAry[i] == '9') {
+                charAry[i] = '6';
+            }
+        }
+
+
+        System.out.println(new String(charAry));
+
+
 
 
     }

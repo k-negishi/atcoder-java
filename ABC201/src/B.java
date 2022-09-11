@@ -1,17 +1,24 @@
 import java.util.*;
 
-public class A {
+public class B {
     final static int MOD = 1000000007;
 
     public static void main(String[] args) {
         MyScanner sc = new MyScanner();
 
-        int a = sc.nextInt();
-        int b = sc.nextInt();
+        int n = sc.nextInt();
 
-        double ans =  (1.0 - ((double)b / a)) * 100;
-        System.out.println(ans);
+        NavigableMap<Integer, String> mountainMap = new TreeMap<>();
 
+        for (int i = 0; i < n; i++) {
+            String s = sc.next();
+            int t = sc.nextInt();
+            mountainMap.put(t, s);
+        }
+
+        int max = mountainMap.lastEntry().getKey();
+        int ans = mountainMap.lowerKey(max);
+        System.out.println(mountainMap.get(ans));
 
     }
 

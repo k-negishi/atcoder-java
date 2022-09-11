@@ -1,18 +1,25 @@
 import java.util.*;
 
-public class A {
+public class C {
     final static int MOD = 1000000007;
 
     public static void main(String[] args) {
         MyScanner sc = new MyScanner();
 
-        int a = sc.nextInt();
-        int b = sc.nextInt();
+        int n = sc.nextInt();
+        int[] p = sc.nextIntArray(n);
 
-        double ans =  (1.0 - ((double)b / a)) * 100;
-        System.out.println(ans);
+        Map<Integer, Integer> qMap = new TreeMap<>();
 
+        for (int i = 0; i < n; i++) {
+            qMap.put(p[i], i+1);
+        }
+        
 
+        for (Map.Entry<Integer, Integer> qEntry : qMap.entrySet()) {
+            System.out.print(qEntry.getValue());
+            System.out.print(" ");
+        }
     }
 
     static class MyScanner {

@@ -6,10 +6,10 @@ public class A {
     public static void main(String[] args) {
         MyScanner sc = new MyScanner();
 
-        int a = sc.nextInt();
-        int b = sc.nextInt();
+        String s = sc.nextLine();
+        char[] charAry = s.toCharArray();
+        String ans = String.valueOf(charAry[1]) + String.valueOf(charAry[2]) + String.valueOf(charAry[0]);
 
-        double ans =  (1.0 - ((double)b / a)) * 100;
         System.out.println(ans);
 
 

@@ -1,17 +1,26 @@
 import java.util.*;
 
-public class A {
+public class B {
     final static int MOD = 1000000007;
 
     public static void main(String[] args) {
         MyScanner sc = new MyScanner();
 
-        int a = sc.nextInt();
-        int b = sc.nextInt();
+        String s = sc.nextLine();
+        int l = s.length();
 
-        double ans =  (1.0 - ((double)b / a)) * 100;
-        System.out.println(ans);
+        for (int i = 0; i < l; i++) {
+            StringBuilder sb = new StringBuilder(s).reverse();
 
+            if (sb.toString().equals(s)) {
+                System.out.println("Yes");
+                return;
+            }
+
+            s = "0" + s;
+        }
+
+        System.out.println("No");
 
     }
 

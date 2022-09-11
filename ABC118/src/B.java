@@ -1,16 +1,26 @@
 import java.util.*;
 
-public class A {
+public class B {
     final static int MOD = 1000000007;
 
     public static void main(String[] args) {
         MyScanner sc = new MyScanner();
+        int n = sc.nextInt();
+        int m = sc.nextInt();
 
-        int a = sc.nextInt();
-        int b = sc.nextInt();
+        Set<Integer> ansSet = new HashSet<>();
+        for (int i = 1; i <= 30 ; i++) {
+            ansSet.add(i);
+        }
 
-        double ans =  (1.0 - ((double)b / a)) * 100;
-        System.out.println(ans);
+        for (int i = 0; i < n; i++) {
+            int k = sc.nextInt();
+            List<Integer> list  = new ArrayList<>(List.of(sc.nextIntArray(k)));
+            Set<Integer> tempSet = new HashSet<>(list);
+            ansSet.retainAll(tempSet);
+        }
+
+        System.out.println(ansSet.size());
 
 
     }
@@ -38,8 +48,8 @@ public class A {
             return Long.parseLong(next());
         }
 
-        int[] nextIntArray(int n) {
-            int[] array = new int[n];
+        Integer[] nextIntArray(int n) {
+            Integer[] array = new Integer[n];
             for (int i = 0; i < n; i++) {
                 array[i] = nextInt();
             }

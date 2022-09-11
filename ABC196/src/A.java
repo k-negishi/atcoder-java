@@ -5,11 +5,17 @@ public class A {
 
     public static void main(String[] args) {
         MyScanner sc = new MyScanner();
-
         int a = sc.nextInt();
         int b = sc.nextInt();
+        int c = sc.nextInt();
+        int d = sc.nextInt();
 
-        double ans =  (1.0 - ((double)b / a)) * 100;
+        int ans = Integer.MIN_VALUE;
+        ans = Math.max(ans, a - c);
+        ans = Math.max(ans, a - d);
+        ans = Math.max(ans, b - c);
+        ans = Math.max(ans, b - d);
+
         System.out.println(ans);
 
 

@@ -9,9 +9,22 @@ public class A {
         int a = sc.nextInt();
         int b = sc.nextInt();
 
-        double ans =  (1.0 - ((double)b / a)) * 100;
-        System.out.println(ans);
+        int kokei = a + b;
 
+        if (kokei >= 15 && b >= 8) {
+            System.out.println(1);
+            return;
+        }
+        if (kokei >= 10 && b >= 3) {
+            System.out.println(2);
+            return;
+        }
+        if (kokei >= 3) {
+            System.out.println(3);
+            return;
+        }
+
+        System.out.println(4);
 
     }
 

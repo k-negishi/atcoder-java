@@ -1,18 +1,34 @@
 import java.util.*;
 
-public class A {
+public class B {
     final static int MOD = 1000000007;
+    static long[] lucasMemo;
 
     public static void main(String[] args) {
         MyScanner sc = new MyScanner();
 
-        int a = sc.nextInt();
-        int b = sc.nextInt();
+        int n = sc.nextInt();
+        lucasMemo = new long[n+1];
+        Arrays.fill(lucasMemo, 0);
+        System.out.println(lucas(n));
 
-        double ans =  (1.0 - ((double)b / a)) * 100;
-        System.out.println(ans);
+    }
 
+    static long lucas(int n) {
+        if (lucasMemo[n] != 0) {
+            return lucasMemo[n];
+        }
 
+        if (n == 0) {
+            return 2;
+        }
+        if (n == 1) {
+            return 1;
+        }
+
+        long result = lucas(n-1) + lucas(n-2);
+        lucasMemo[n] = result;
+        return result;
     }
 
     static class MyScanner {

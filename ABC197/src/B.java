@@ -7,8 +7,8 @@ public class B {
         MyScanner sc = new MyScanner();
         int h = sc.nextInt();
         int w = sc.nextInt();
-        int x = sc.nextInt();
-        int y = sc.nextInt();
+        int x = sc.nextInt() - 1;
+        int y = sc.nextInt() - 1;
 
         int count = 0;
         char[][] s = new char[h][w];
@@ -17,27 +17,42 @@ public class B {
             s[i] = moji.toCharArray();
         }
 
-        int i1 = Math.max(x - 2, 0);
 
-        for (int i = i1; i < Math.min(w, x+1) ; i++) {
-            if (s[y-1][i] == '.')  {
+        // 縦に探索
+        for (int i = x - 1; i >= 0; i--) {
+            if (s[i][y] == '.') {
                 count++;
+            } else {
+                break;
             }
         }
 
-        int j1 = Math.max(y - 2, 0);
-        for (int j = j1; j < Math.min(h, y+1) ; j++) {
-            if (s[j][x-1] == '.')  {
+        for (int i = x + 1; i < h; i++) {
+            if (s[i][y] == '.') {
                 count++;
+            } else {
+                break;
             }
         }
 
-        if (s[x-1][y-1] == '.') {
-            count--;
+        // 横に探索
+        for (int i = y - 1; i >= 0 ; i--) {
+            if (s[x][i] == '.') {
+                count++;
+            } else {
+                break;
+            }
         }
 
-        System.out.println(count);
+        for (int i = y + 1; i < w ; i++) {
+            if (s[x][i] == '.') {
+                count++;
+            } else {
+                break;
+            }
+        }
 
+        System.out.println(count + 1);
     }
 
     static class MyScanner {

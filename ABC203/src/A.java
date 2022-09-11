@@ -6,12 +6,19 @@ public class A {
     public static void main(String[] args) {
         MyScanner sc = new MyScanner();
 
-        int a = sc.nextInt();
-        int b = sc.nextInt();
+        int n = sc.nextInt();
+        int k = sc.nextInt();
 
-        double ans =  (1.0 - ((double)b / a)) * 100;
+        int ans = 0;
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= k; j++) {
+                String roomNum = String.valueOf(i) + "0" + String.valueOf(j);
+                ans += Integer.parseInt(roomNum);
+            }
+        }
+
         System.out.println(ans);
-
 
     }
 

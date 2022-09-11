@@ -1,16 +1,31 @@
 import java.util.*;
+import java.util.stream.Stream;
 
-public class A {
+public class B {
     final static int MOD = 1000000007;
 
     public static void main(String[] args) {
         MyScanner sc = new MyScanner();
+        String x = sc.nextLine();
 
-        int a = sc.nextInt();
-        int b = sc.nextInt();
+        char[] xNumAry = x.toCharArray();
+        // int xNumAry = Stream.of(xNumChar).mapToInt(Integer::parseInt).toArray();
+        // int[] xNumAry = Stream.of(x).mapToInt(Integer::parseInt).toArray();
 
-        double ans =  (1.0 - ((double)b / a)) * 100;
-        System.out.println(ans);
+        if (xNumAry[0] == xNumAry[1] && xNumAry[1] == xNumAry[2] && xNumAry[2] == xNumAry[3]) {
+            System.out.println("Weak");
+            return;
+        }
+
+
+        if ((xNumAry[0] + 1) % 10 == xNumAry[1] % 10
+                && (xNumAry[1] + 1) % 10 == xNumAry[2] % 10
+                && (xNumAry[2] + 1) % 10 == xNumAry[3] % 10) {
+            System.out.println("Weak");
+            return;
+        }
+
+        System.out.println("Strong");
 
 
     }

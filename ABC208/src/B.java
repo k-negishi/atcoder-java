@@ -1,18 +1,40 @@
 import java.util.*;
 
-public class A {
+public class B {
     final static int MOD = 1000000007;
 
     public static void main(String[] args) {
         MyScanner sc = new MyScanner();
 
-        int a = sc.nextInt();
-        int b = sc.nextInt();
+        int p = sc.nextInt();
 
-        double ans =  (1.0 - ((double)b / a)) * 100;
-        System.out.println(ans);
+        int count = 0;
+        int nowPrice = p;
 
+        for (int i = 10; i > 0; i--) {
+            int coin = factorial(i);
+            for (int j = 1; j <= 100; j++) {
+                nowPrice -= coin;
+                count++;
+                if (nowPrice == 0) {
+                    System.out.println(count);
+                    return;
+                }
+                if (nowPrice < 0) {
+                    count--;
+                    nowPrice += coin;
+                    break;
+                }
+            }
+        }
+    }
 
+    static int factorial(int n) {
+        int result = 1;
+        for (int i = 1; i <= n; i++) {
+            result *= i;
+        }
+        return result;
     }
 
     static class MyScanner {

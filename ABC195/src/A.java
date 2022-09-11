@@ -6,13 +6,14 @@ public class A {
     public static void main(String[] args) {
         MyScanner sc = new MyScanner();
 
-        int a = sc.nextInt();
-        int b = sc.nextInt();
+        int m = sc.nextInt();
+        int h = sc.nextInt();
 
-        double ans =  (1.0 - ((double)b / a)) * 100;
-        System.out.println(ans);
-
-
+        if (h % m == 0) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
     }
 
     static class MyScanner {

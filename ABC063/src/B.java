@@ -1,16 +1,24 @@
 import java.util.*;
 
-public class A {
+public class B {
     final static int MOD = 1000000007;
 
     public static void main(String[] args) {
         MyScanner sc = new MyScanner();
 
-        int a = sc.nextInt();
-        int b = sc.nextInt();
+        String s = sc.nextLine();
 
-        double ans =  (1.0 - ((double)b / a)) * 100;
-        System.out.println(ans);
+        Set<Character> characterSet = new HashSet<>();
+
+        for (int i = 0; i < s.length(); i++) {
+            characterSet.add(s.charAt(i));
+        }
+
+        if (s.length() == characterSet.size()) {
+            System.out.println("yes");
+        } else {
+            System.out.println("no");
+        }
 
 
     }
