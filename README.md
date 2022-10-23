@@ -1,0 +1,1 @@
+This repository stores AtCoder's solutions in Java.
