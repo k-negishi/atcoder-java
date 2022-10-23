@@ -77,7 +77,7 @@
       <module fileurl="file://$PROJECT_DIR$/ABC264/ABC264.iml" filepath="$PROJECT_DIR$/ABC264/ABC264.iml" />
       <module fileurl="file://$PROJECT_DIR$/ABC265/ABC265.iml" filepath="$PROJECT_DIR$/ABC265/ABC265.iml" />
       <module fileurl="file://$PROJECT_DIR$/Atcoder.iml" filepath="$PROJECT_DIR$/Atcoder.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ZZZ_TestSpace/ZZZ_TestSpace.iml" filepath="$PROJECT_DIR$/ZZZ_TestSpace/ZZZ_TestSpace.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zzz-test-template-files/zzz-test-template-files.iml" filepath="$PROJECT_DIR$/zzz-test-template-files/zzz-test-template-files.iml" />
     </modules>
   </component>
 </project>
